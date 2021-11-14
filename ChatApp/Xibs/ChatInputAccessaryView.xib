@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatInputAccessaryView" customModule="ChatApp" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTextView" destination="FJg-UK-7PL" id="nLU-kB-J2f"/>
+                <outlet property="sendButton" destination="SsG-x6-uZL" id="bVf-hq-5Lh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatInputAccessaryView" customModule="ChatApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="481" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" text="メッセージ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FJg-UK-7PL">
+                    <rect key="frame" x="10" y="10" width="405.5" height="146"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsG-x6-uZL">
+                    <rect key="frame" x="425.5" y="67.5" width="45.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system"/>
+                    <connections>
+                        <action selector="tappedSendButton:" destination="-1" eventType="touchUpInside" id="iUj-uW-1P4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SsG-x6-uZL" firstAttribute="centerY" secondItem="FJg-UK-7PL" secondAttribute="centerY" id="7GO-0U-JE9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SsG-x6-uZL" secondAttribute="trailing" constant="10" id="NRN-S1-lNH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FJg-UK-7PL" secondAttribute="bottom" constant="10" id="TEK-aO-q7f"/>
+                <constraint firstItem="FJg-UK-7PL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="kON-2S-BJF"/>
+                <constraint firstItem="FJg-UK-7PL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="po4-te-tRg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FJg-UK-7PL" secondAttribute="bottom" constant="10" id="w67-DT-iYR"/>
+                <constraint firstItem="SsG-x6-uZL" firstAttribute="leading" secondItem="FJg-UK-7PL" secondAttribute="trailing" constant="10" id="wzh-yi-5Vm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-0.7246376811594204" y="-40.178571428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
